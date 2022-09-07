@@ -1,12 +1,6 @@
 async function copyText(text) {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    args: [text],
-    function: function(text) {
-      navigator.clipboard.writeText(text);
-    }
-  });
+  chrome.tabs.sendMessage(tab.id, { method: "copy", args: [text] });
 }
 
 async function retrieveBibTeX(id) {

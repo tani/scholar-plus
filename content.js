@@ -22,3 +22,9 @@ document
       }
     });
   });
+
+chrome.runtime.onMessage.addListener(async ({method, args}) => {
+  if (method === "copy") {
+    navigator.clipboard.writeText(args[0]);
+  }
+})

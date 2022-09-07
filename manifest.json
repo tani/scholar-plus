@@ -1,9 +1,9 @@
 {
   "name": "Scholar Plus",
   "description": "Utilities for Google Scholar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "manifest_version": 3,
-  "permissions": ["downloads", "clipboardWrite", "scripting", "tabs"],
+  "permissions": ["downloads", "clipboardWrite", "tabs"],
   "icons": {
     "128": "icon.png"
   },
